@@ -1,7 +1,7 @@
 import React  from 'react'
 const App=()=>{
   return(
-    <div>سلام علیکم</div>
+    <div>سلام !م</div>
   )
 }
 export default App
