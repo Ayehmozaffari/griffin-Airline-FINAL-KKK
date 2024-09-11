@@ -1,6 +1,6 @@
 import React  from 'react';
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/home/Home";
+import Navbar from "./Components/Navbar/Navbar";
+import Home from "./Components/Home/Home";
 const App=()=>{
   return(
     <div>
