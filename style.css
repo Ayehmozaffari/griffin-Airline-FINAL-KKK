@@ -1,0 +1,70 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap');
+html,
+body{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Zain", sans-serif;
+}
+:root{
+    --primary-color:#2887ff;
+    --primary-color-dark:#2476da;
+    --text-dark:#0a0a0a;
+    --text-light:#737373;
+    --extra-light:#f3f4f6;
+    --white:#fff;
+    --max-width:1200px;
+}
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+.section__container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+.section__header{
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+}
+.section__description{
+    max-width: 600px;
+    margin-inline: auto;
+    color: var(--text-light);
+    text-align: center;
+}
+.btn{
+padding: 0.75rem 1.5rem;
+outline: none;
+border:none ;
+font-size: 1rem;
+white-space: nowrap;
+color: var(--white);
+background-color: var(--primary-color);
+font-family: "Zain", sans-serif;
+border-radius: 5rem;
+transition: 0.3s;
+cursor: pointer;
+}
+.btn:hover{
+    background-color:var(--primary-color-dark) ;
+}
+img{
+    display: flex;
+    width:100%;
+}
+a{
+    text-decoration: none;
+    transition: 0.3s;
+    color: #0a0a0a;
+}
+
+ul{
+    list-style: none;
+}
