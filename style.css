@@ -131,3 +131,189 @@ ul{
         height: 30px;
         background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA3MiA3MiI+CjxwYXRoIGQ9Ik0gMTkgMTUgQyAxNy45NzcgMTUgMTYuOTUxODc1IDE1LjM5MDg3NSAxNi4xNzE4NzUgMTYuMTcxODc1IEMgMTQuNjA5ODc1IDE3LjczMzg3NSAxNC42MDk4NzUgMjAuMjY2MTI1IDE2LjE3MTg3NSAyMS44MjgxMjUgTCAzMC4zNDM3NSAzNiBMIDE2LjE3MTg3NSA1MC4xNzE4NzUgQyAxNC42MDk4NzUgNTEuNzMzODc1IDE0LjYwOTg3NSA1NC4yNjYxMjUgMTYuMTcxODc1IDU1LjgyODEyNSBDIDE2Ljk1MTg3NSA1Ni42MDgxMjUgMTcuOTc3IDU3IDE5IDU3IEMgMjAuMDIzIDU3IDIxLjA0ODEyNSA1Ni42MDkxMjUgMjEuODI4MTI1IDU1LjgyODEyNSBMIDM2IDQxLjY1NjI1IEwgNTAuMTcxODc1IDU1LjgyODEyNSBDIDUxLjczMTg3NSA1Ny4zOTAxMjUgNTQuMjY3MTI1IDU3LjM5MDEyNSA1NS44MjgxMjUgNTUuODI4MTI1IEMgNTcuMzkxMTI1IDU0LjI2NTEyNSA1Ny4zOTExMjUgNTEuNzM0ODc1IDU1LjgyODEyNSA1MC4xNzE4NzUgTCA0MS42NTYyNSAzNiBMIDU1LjgyODEyNSAyMS44MjgxMjUgQyA1Ny4zOTAxMjUgMjAuMjY2MTI1IDU3LjM5MDEyNSAxNy43MzM4NzUgNTUuODI4MTI1IDE2LjE3MTg3NSBDIDU0LjI2ODEyNSAxNC42MTA4NzUgNTEuNzMxODc1IDE0LjYwOTg3NSA1MC4xNzE4NzUgMTYuMTcxODc1IEwgMzYgMzAuMzQzNzUgTCAyMS44MjgxMjUgMTYuMTcxODc1IEMgMjEuMDQ4MTI1IDE1LjM5MTg3NSAyMC4wMjMgMTUgMTkgMTUgeiI+PC9wYXRoPgo8L3N2Zz4=') 50% 50% no-repeat;
         background-size: 100%; }
+
+        header{
+            margin-top: 5rem;
+            padding-inline: 1rem;
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+        }
+        header::before{
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: calc(100% - 2rem);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-image: url(img/img3.jpg);
+            background-position:  center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 3rem;
+            z-index: -1;
+        }
+        @media (width>768px) {
+            nav{
+                position: static;
+                padding: 2rem 1rem;
+                max-width: var(--max-width);
+                margin-inline: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 2rem;
+            }
+            .nav__header{
+                flex: 1;
+                padding: 0%;
+                background-color: transparent;
+            }
+            .nav__logo .logo{
+                width: 40px;
+                height: 40px;
+            }
+            .nav__menu__btn{
+                display: none;
+            }
+            .nav__links{
+                position: static;
+                width: fit-content;
+                padding: 0;
+                flex-direction: row;
+                background-color: transparent;
+                transform: none !important;
+            }
+            .nav__links a{
+                color: #0a0a0a;
+            }
+            .nav__links a:hover{
+                color: #2476da;
+            }
+            .nav__links li:last-child{
+                display: none;
+            }
+            .nav__btns{
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .nav__btns button{
+                padding: 0.75rem 2rem;
+                background-color: var(--text-dark);
+            }
+            header{
+                margin-top: 0px;
+            }
+            .header__container{
+                grid-template-columns: minmax(0,1 1fr)
+                repeat(5,minmax(0,calc(var(--max-width)/5)))
+                minmax(0, 1fr);
+            }
+            .header__content{
+                grid-column: 2/4;
+                padding-block: 8rem;
+            }
+            .header__content :is(p,h1){
+                text-align: left;
+            }
+            .header__btns{
+                justify-content: flex-start;
+            }
+            .header__image{
+                grid-column: 4/8;
+                position: relative;
+                isolation: isolate;
+                height: 100%;
+            }
+            .header__image img{
+                position: absolute;
+                top: 2rem;
+                left: 0;
+                height: 100%;
+                width: unset;
+            }
+        }
+        .header__container{
+            display: grid;
+        }
+        .header__content{
+            padding: 4rem 1rem;
+            color: var(--extra-light);
+            text-align: center;
+            vertical-align: middle;
+        }
+        .header__content p{
+            margin-bottom: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        .header__content h1{
+            margin-bottom: 2rem;
+            font-size: 4.5rem;
+            font-weight: 600;
+            line-height: 5.5rem;
+            text-align: center;
+        }
+        .header__btns{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .header__btns .btn{
+            padding: 1rem 2rem;
+
+        }
+        .header__btns a{
+            padding: 4px 9px;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            background-color: var(--extra-light);
+            border-radius: 100%;
+        }
+        .header__image {
+            animation-name: move;
+            animation: move 5s forwards;
+        }
+        @keyframes move {
+            0% {
+                top: 0;
+              }
+              50% {
+                top: 50px;
+                left: 40px;
+              }
+              50% {
+                top: 40px;
+              }
+              100% {
+                top: 0;
+              }
+          }
+          .header__content h1{
+            animation-name: hell;
+            animation: hell 3s forwards;
+          }
+          .header__content p{
+            animation-name: hell;
+            animation: hell 3s forwards;
+          }
+          
+          @keyframes hell {
+            from {
+              margin-top: 50px;
+            }
+            50% {
+              margin-top: 150px !important; /* ignored */
+            }
+            to {
+              margin-top: 100px;
+            }
+          }
+          
+        
+          
+          
