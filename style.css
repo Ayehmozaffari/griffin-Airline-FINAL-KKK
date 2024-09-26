@@ -277,7 +277,16 @@ ul{
         .header__image {
             animation-name: move;
             animation: move 5s forwards;
+            
+           
         }
+        .nav__header{
+            transition: all 0.8s;
+        }
+        .show{
+            transform: translate(0,0);
+        }
+
         @keyframes move {
             0% {
                 top: 0;

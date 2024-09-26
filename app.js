@@ -20,3 +20,13 @@ navLinks.addEventListener("click" ,(e)=>{
 //     ...scrollRevealOption,
 //     origin:"right",
 // });
+let items=document.querySelectorAll('.container')
+const observer=new IntersectionObserver(entrise=>{
+    entrise.forEach(e => {
+        e.target.classList
+        .toggle("show",e.isIntersecting)
+    })
+})
+items.forEach(container=> {
+    observer.observe(container)
+})
