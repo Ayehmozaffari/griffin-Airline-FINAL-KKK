@@ -8,10 +8,11 @@ body{
     font-family: "Zain", sans-serif;
 }
 nav{
-    position: fixed;
-    isolation: isolate;
-    top: 0%;
+    position: sticky;
+    isolation:unset;
+    top: -10px;
     width: 100%;
+    bottom: -90px;
     z-index: 9;
 }
 .nav__header{
@@ -21,6 +22,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     background-color: var(--white);
+    position: sticky;
 }
 :root{
     --primary-color:#2887ff;
@@ -196,14 +198,45 @@ ul{
         .destination__card:hover .destination__rating{
             background-color: var(--primary-color-dark);
         }
+        .journey__grid{
+            margin-top: 2rem;
+            display: grid;
+            gap: 0 1rem;
+        }
+        .journey__card{
+            position: relative;
+            padding: 4rem;
+            isolation: isolate;
+            overflow: hidden;
+        }
+        .journey__card__bg{
+            padding: 2rem;
+            background-color: var(--extra-light);
+            border-top-right-radius: 1rem;
+            border-top-left-radius: 1rem;
+        }
+        .journey__card__bg span{
+            display: inline-block;
+            margin-bottom: 4rem;
+            font-size: 1.75rem;
+            color:#2887ff;
+        }
         @media (width>540px){
             .destination__grid{
                 grid-template-columns: repeat(2,1fr);
             }
+            nav{
+                box-shadow: rgba(46, 153, 240, 0.4) 0px 5px, rgba(46, 124, 240, 0.3) 0px 10px, rgba(46, 137, 240, 0.2) 0px 15px, rgba(46, 137, 240, 0.1) 0px 20px, rgba(46, 130, 240, 0.05) 0px 25px;
+            }
+        }
+        @media (width<540px){
+            nav{
+                box-shadow: 0px 9px 47px -6px rgba(80,227,194,0.45);
+            }
         }
         @media (width>768px) {
             nav{
-                position: static;
+                position: sticky;
                 padding: 2rem 1rem;
                 max-width: var(--max-width);
                 margin-inline: auto;
@@ -211,15 +244,22 @@ ul{
                 align-items: center;
                 justify-content: space-between;
                 gap: 2rem;
+                background-color:var(--white);
+                border-radius: 50px;
+                top: 20px;
+                border:1px solid #eee;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
             }
             .nav__header{
                 flex: 1;
                 padding: 0%;
                 background-color: transparent;
+               
             }
             .nav__logo .logo{
                 width: 40px;
                 height: 40px;
+                
             }
             .nav__menu__btn{
                 display: none;

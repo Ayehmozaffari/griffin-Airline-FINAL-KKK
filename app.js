@@ -20,13 +20,13 @@ navLinks.addEventListener("click" ,(e)=>{
 //     ...scrollRevealOption,
 //     origin:"right",
 // });
-let items=document.querySelectorAll('.container')
+let items=document.querySelectorAll('.header__image')
 const observer=new IntersectionObserver(entrise=>{
     entrise.forEach(e => {
         e.target.classList
         .toggle("show",e.isIntersecting)
     })
 })
-items.forEach(container=> {
-    observer.observe(container)
+items.forEach(header__image=> {
+    observer.observe(header__image)
 })
