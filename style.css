@@ -229,7 +229,7 @@ ul{
         }
         .journey__card__content{
            position: absolute;
-           top: 0;
+           top: 100%;
            left: 0;
            width: 100%;
            height: 100%;
@@ -252,8 +252,14 @@ ul{
             border-radius: 100%;
 
         }
-        .journey__card__bg svg{
-            color: #fff;
+        .journey__card__content h4{
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+        .journey__card__content p{
+            color: var(--extra-light);
         }
 
         @media (width>540px){
@@ -263,6 +269,7 @@ ul{
             nav{
                 box-shadow: rgba(46, 153, 240, 0.4) 0px 5px, rgba(46, 124, 240, 0.3) 0px 10px, rgba(46, 137, 240, 0.2) 0px 15px, rgba(46, 137, 240, 0.1) 0px 20px, rgba(46, 130, 240, 0.05) 0px 25px;
             }
+          
         }
         @media (width<540px){
             nav{
@@ -358,6 +365,9 @@ ul{
             }
            .destination__grid{
             grid-template-columns: repeat(3,1fr);
+           }
+           .journey__grid{
+            grid-template-columns: repeat(2,1fr);
            }
         }
 
