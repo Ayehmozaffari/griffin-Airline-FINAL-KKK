@@ -229,7 +229,7 @@ ul{
         }
         .journey__card__content{
            position: absolute;
-           top: 100%;
+           top: 0;
            left: 0;
            width: 100%;
            height: 100%;
@@ -239,6 +239,23 @@ ul{
            border-top-left-radius:  1rem;
            transition: 0.3s;
         }
+        .journey__card:hover .journey__card__content{
+            top:0;
+        }
+        .journey__card__content span{
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: 7px 9px;
+            font-size: 1rem;
+            color: var(--white);
+            border: 2px solid  var(--white);
+            border-radius: 100%;
+
+        }
+        .journey__card__bg svg{
+            color: #fff;
+        }
+
         @media (width>540px){
             .destination__grid{
                 grid-template-columns: repeat(2,1fr);
