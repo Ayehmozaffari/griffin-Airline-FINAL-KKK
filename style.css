@@ -261,6 +261,39 @@ ul{
         .journey__card__content p{
             color: var(--extra-light);
         }
+        .showcase__container{
+            display: grid;
+            gap: 2rem;
+        }
+        .showcase__image img{
+            max-width: 400px;
+            margin-inline: auto;
+            box-shadow: 5px 5px  20px rgba(0, 0, 0, 0.2);
+        }
+        .showcase__content h4{
+            margin-bottom: 2rem;
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            text-align: center;
+        }
+        .showcase__content p{
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            text-align: center;
+        }
+        .showcase__content .btn{
+            width: 100%;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            background-image:url(img/sunset.PNG);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+        }
 
         @media (width>540px){
             .destination__grid{
@@ -269,7 +302,10 @@ ul{
             nav{
                 box-shadow: rgba(46, 153, 240, 0.4) 0px 5px, rgba(46, 124, 240, 0.3) 0px 10px, rgba(46, 137, 240, 0.2) 0px 15px, rgba(46, 137, 240, 0.1) 0px 20px, rgba(46, 130, 240, 0.05) 0px 25px;
             }
-          
+          .showcase__container{
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+          }
         }
         @media (width<540px){
             nav{
@@ -369,6 +405,10 @@ ul{
            .journey__grid{
             grid-template-columns: repeat(2,1fr);
            }
+           .showcase__container{
+            grid-template-columns: repeat(3,1fr);
+           }
+           .showcase__content{grid-column: 2/4;}
         }
 
         .header__container{
