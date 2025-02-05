@@ -294,7 +294,25 @@ ul{
             background-repeat: no-repeat;
             border-radius: 5px;
         }
-
+        .banner_container{
+            display: grid;
+            gap:2rem;
+        }
+        .banner_card{
+            padding: 2rem 1rem;
+            text-align: center;
+            background-color: var(--extra-light);
+            border-radius: 2rem;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        .banner_card h4{
+            font-size: 5rem;
+            font-weight: 500;
+            color: var(--primary-color-dark);
+        }
+        .banner_card p{
+            color: var(--text-light);
+        }
         @media (width>540px){
             .destination__grid{
                 grid-template-columns: repeat(2,1fr);
@@ -305,6 +323,9 @@ ul{
           .showcase__container{
             grid-template-columns: repeat(2,1fr);
             align-items: center;
+          }
+          .banner_container{
+            grid-template-columns: repeat(2,1fr);
           }
         }
         @media (width<540px){
@@ -409,6 +430,10 @@ ul{
             grid-template-columns: repeat(3,1fr);
            }
            .showcase__content{grid-column: 2/4;}
+           .banner_container{
+            grid-template-columns: repeat(3,1fr);
+          }
+        
         }
 
         .header__container{
